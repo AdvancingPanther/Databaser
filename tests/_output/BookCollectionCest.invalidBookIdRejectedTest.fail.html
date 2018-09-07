@@ -1,0 +1,43 @@
+ <!DOCTYPE html>
+<html>
+<head>
+<title>Book Details</title>
+<style>
+h2 {
+    margin-bottom: 1ex;
+}
+
+.decimal {
+    text-align: right;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid black;
+    padding-right: 1ex;
+    padding-left: 1ex;
+}
+
+input, select, label {
+    display: block;
+}
+
+input, select {
+    margin-top: 0.5ex;
+}
+
+input.addButton {
+    margin-top: 2ex;
+}
+
+label {
+    margin-top: 1ex;
+    font-weight: bold;
+}
+</style></head>
+<body>
+<h1 id="pageTitle">Book Details</h1>ID:1<form id="modForm" action="index.php" method="post"><input name="op" value="mod" type="hidden" /><input name="id" value="1" type="hidden"/>Title:<br/><input name="title" type="text" value="Jungle Book" /><br/>Author:<br/><input name="author" type="text" value="R. Kipling" /><br/>Description:<br/><input name="description" type="text" value="A classic book." /><br/><input type="submit" value="Update book record" /></form><form id="delForm" action="index.php" method="post"><input name="op" value="del" type="hidden" /><input name="id" value="1" type="hidden" /><input type="submit" value="Delete book record" /></form><p><a href=index.php>Back to book list</a></p></body>
+</html>    

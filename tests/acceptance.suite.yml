@@ -1,0 +1,20 @@
+# Codeception Test Suite Configuration
+#
+# Suite for acceptance tests.
+# Perform tests in browser using the WebDriver or PhpBrowser.
+# If you need both WebDriver and PHPBrowser tests - create a separate suite.
+
+actor: AcceptanceTester
+modules:
+    enabled:
+        - PhpBrowser:
+            url: http://127.0.0.1/IMT2571/assignment1/
+        - \Helper\Acceptance
+
+        - Db:
+            dsn: 'mysql:host=127.0.0.1;dbname=test'
+            user: 'root'
+            password: 'LetscodePHP'
+            dump: 'tests/_data/assignment1.sql'
+            populate: true # run populator before all tests 
+            cleanup: true # run populator before each test

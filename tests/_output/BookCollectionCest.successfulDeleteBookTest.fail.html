@@ -1,0 +1,50 @@
+ Book deleted<br><!DOCTYPE html>
+<html>
+<head>
+<title>Book Collection</title>
+<style>
+h2 {
+    margin-bottom: 1ex;
+}
+
+.decimal {
+    text-align: right;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid black;
+    padding-right: 1ex;
+    padding-left: 1ex;
+}
+
+input, select, label {
+    display: block;
+}
+
+input, select {
+    margin-top: 0.5ex;
+}
+
+input.addButton {
+    margin-top: 2ex;
+}
+
+label {
+    margin-top: 1ex;
+    font-weight: bold;
+}
+</style></head>
+<body>
+<h1 id="pageTitle">Book Collection</h1><h2>Current Titles</h2>
+<table id='bookList'>
+  <thead>
+    <tr><th>ID</th><th>Title</th><th>Author</th><th>Description</th></tr>
+  </thead>
+  <tbody><tr id="book1"><td><a href="index.php?id=1">1</a></td><td>Jungle Book</td><td>R. Kipling</td><td>A classic book.</td></tr><tr id="book3"><td><a href="index.php?id=3">3</a></td><td>PHP &amp; MySQL for Dummies</td><td>J. Valade</td><td>Written by some smart gal.</td></tr>  </tbody>
+</table>
+<h2>New Titles</h2><form id="addForm" action="index.php" method="post"><input name="op" value="add" type="hidden"/><label for="title">Title:</label><input name="title" type="text" value=""/><label for="author">Author:</label><input name="author" type="text" value=""/><label for="description">Description:</label><input name="description" type="text" value=""/><input type="submit" value="Add new book"/></form></body>
+</html>    
